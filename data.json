@@ -1,0 +1,12 @@
+{
+    "products": [
+        {
+            "Nombre": "Salchica",
+            "Precio": 40,
+            "Cantidad": 1000,
+            "EsLiquido": false,
+            "Marca": "Corona",
+            "Calificacion": 1
+        }
+    ]
+}
