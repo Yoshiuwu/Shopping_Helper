@@ -1,0 +1,5 @@
+Nombre,Precio,Cantidad,EsLiquido,Marca,Calificacion
+Salchicha,40,1000,False,Corona,1
+Cereal,60,1040,False,Zucaritas,5
+Cereal,45,1000,False,Nesquik,4
+Leche,25,1000,True,Lala,3

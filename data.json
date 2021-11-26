@@ -1,12 +1,36 @@
 {
-    "products": [
+    "productos": [
         {
-            "Nombre": "Salchica",
-            "Precio": 40,
+            "Nombre": "Salchicha",
+            "Precio": 40.0,
             "Cantidad": 1000,
             "EsLiquido": false,
             "Marca": "Corona",
             "Calificacion": 1
+        },
+        {
+            "Nombre": "Cereal",
+            "Precio": 60.0,
+            "Cantidad": 1040,
+            "EsLiquido": false,
+            "Marca": "Zucaritas",
+            "Calificacion": 5
+        },
+        {
+            "Nombre": "Cereal",
+            "Precio": 45.0,
+            "Cantidad": 1000,
+            "EsLiquido": false,
+            "Marca": "Nesquik",
+            "Calificacion": 4
+        },
+        {
+            "Nombre": "Leche",
+            "Precio": 25.0,
+            "Cantidad": 1000,
+            "EsLiquido": true,
+            "Marca": "Lala",
+            "Calificacion": 3
         }
     ]
 }
