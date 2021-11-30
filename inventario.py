@@ -22,6 +22,8 @@ class Inventario:
 			if not self.checkDuplicate(productoObj):
 				self._listaProductos.append(productoObj)
 
+		
+
 	def checkDuplicate(self, productoAChecar):
 		for i in range(len(self._listaProductos)):
 			if self._listaProductos[i]._nombre == productoAChecar._nombre and self._listaProductos[i]._marca == productoAChecar._marca:
@@ -54,7 +56,6 @@ class Inventario:
 		data = {}
 		data['productos'] = []
 		for productoObj in self._listaProductos:
-			print(productoObj.toString())
 			data['productos'].append({
 					'Nombre': productoObj._nombre,
 					'Precio': productoObj._precio,

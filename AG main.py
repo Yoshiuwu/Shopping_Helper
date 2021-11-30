@@ -33,7 +33,7 @@ def option2(inventario_actual):
         else:
             listaSeleccion.append(listaPosiblesProductos[int(option)-1])
             listaPosiblesProductos.remove(listaPosiblesProductos[int(option)-1])
-    dinero = input("Cuanto Dinero planea gastar?")
+    dinero = input("Cuanto Dinero planea gastar?: ")
             
     input("Seleccion elegida Satisfactoriamente.\nPresione Enter para continuar...")
 
@@ -41,6 +41,15 @@ def option2(inventario_actual):
 
 
 def empezarBusqueda(inventario_actual, listaSeleccion, dinero):
+    carrito = shopping_cart.Shopping_Cart(inventario_actual, listaSeleccion, dinero)
+
+    ag = AG.AG(30, len(inventario_actual._listaProductos), 1, 500, 0.01, carrito)
+    xd = ag.run()
+
+    print(xd)
+
+    input("Encontrado.\nPresione Enter para continuar...")
+
     return 0
 
 def main():
@@ -57,15 +66,6 @@ def main():
             option2(inventario_actual)
         elif option == "0":
             return 0
-            
-        carrito = shopping_cart.Shopping_Cart(inventario_actual, 100)
-
-        #prod = producto.Producto('Salchicha',5,1000,False,'Corona',5)
-        #print(prod.toJSON())
-        # ag = AG.AG(30, len(inventario_actual._listaProductos), 1, 1200, 0.01, mochila)
-        #ag.run()
-
-
 
 if __name__ == '__main__':
     main()
