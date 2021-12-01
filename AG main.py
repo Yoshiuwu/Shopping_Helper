@@ -44,10 +44,29 @@ def empezarBusqueda(inventario_actual, listaSeleccion, dinero):
     carrito = shopping_cart.Shopping_Cart(inventario_actual, listaSeleccion, dinero)
 
     ag = AG.AG(50, len(inventario_actual._listaProductos), 1, 1000, 0.01, carrito)
-    xd = ag.run()
+    mejorSolucion = ag.run()
 
-    print(xd)
-
+    print("Objetos seleccionados:")
+    for i in range(len(mejorSolucion)):
+        if mejorSolucion[i]:
+            productoActual = inventario_actual._listaProductos[i]
+            cantidad = ""
+            if productoActual._cantidad >= 1000:
+                cantidad = cantidad + str(productoActual._cantidad / 1000)
+                if productoActual._esLiquido:
+                    cantidad = cantidad + " L"
+                else:
+                    cantidad = cantidad + " Kg"
+            else:
+                cantidad = cantidad + str(productoActual._cantidad)
+                if productoActual._esLiquido:
+                    cantidad = cantidad + " ml"
+                else:
+                    cantidad = cantidad + " gr"
+            precio = str(productoActual._precio)
+            indiceString = str(i)
+            print(indiceString + " - " + productoActual._nombre + " " + productoActual._marca + " " + cantidad + " $" + precio)
+    #Guardar en un txt
     input("Encontrado.\nPresione Enter para continuar...")
 
     return 0

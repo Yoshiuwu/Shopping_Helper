@@ -26,7 +26,7 @@ class Inventario:
 
 	def checkDuplicate(self, productoAChecar):
 		for i in range(len(self._listaProductos)):
-			if self._listaProductos[i]._nombre == productoAChecar._nombre and self._listaProductos[i]._marca == productoAChecar._marca:
+			if self._listaProductos[i]._nombre == productoAChecar._nombre and self._listaProductos[i]._marca == productoAChecar._marca and self._listaProductos[i]._cantidad == productoAChecar._cantidad:
 				return True
 		return False
 				

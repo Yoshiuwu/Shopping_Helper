@@ -38,7 +38,7 @@ class AG:
             self._individuos[np.random.randint(len(self._individuos))] = copy.deepcopy(self._mejor_historico)
             print("Generación: ", generacion, 'Mejor Histórico: ', self._mejor_historico._cromosoma, self._mejor_historico._fitness)
             generacion += 1
-        return self._mejor_historico
+        return self._mejor_historico._cromosoma
 
     def crearIndividuos(self):
         for i in range(self._cantidad_individuos):
