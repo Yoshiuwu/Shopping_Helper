@@ -66,6 +66,6 @@ class Inventario:
 			})
 
 		with open(self._nombreArchivo , 'w') as file:
-			json.dump(data, file, indent=4)
+			json.dump(data, file, indent = 4)
 
 	

@@ -43,7 +43,7 @@ def option2(inventario_actual):
 def empezarBusqueda(inventario_actual, listaSeleccion, dinero):
     carrito = shopping_cart.Shopping_Cart(inventario_actual, listaSeleccion, dinero)
 
-    ag = AG.AG(30, len(inventario_actual._listaProductos), 1, 500, 0.01, carrito)
+    ag = AG.AG(50, len(inventario_actual._listaProductos), 1, 1000, 0.01, carrito)
     xd = ag.run()
 
     print(xd)
