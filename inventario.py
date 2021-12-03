@@ -7,20 +7,27 @@ class Inventario:
 		self._nombreArchivo = nombreArchivo
 		self._listaProductos = []
 
-		with open(nombreArchivo) as file:
+		try:
+			file = open(nombreArchivo, 'r')
 			data = json.load(file)
+			for productData in data['productos']:
+				productoObj = producto.Producto(
+					productData['Nombre'],
+					productData['Precio'],
+					productData['Cantidad'],
+					productData['EsLiquido'],
+					productData['Marca'],
+					productData['Calificacion'],
+				)
+				if not self.checkDuplicate(productoObj):
+					self._listaProductos.append(productoObj)
+		except FileNotFoundError:
+			jsonArray = ({'productos':[]}) 
+			jsonString = json.dumps(jsonArray, indent=4)
+			jsonFile = open(nombreArchivo, "w")
+			jsonFile.write(jsonString)
+			jsonFile.close()
 
-		for productData in data['productos']:
-			productoObj = producto.Producto(
-				productData['Nombre'],
-				productData['Precio'],
-				productData['Cantidad'],
-				productData['EsLiquido'],
-				productData['Marca'],
-				productData['Calificacion'],
-			)
-			if not self.checkDuplicate(productoObj):
-				self._listaProductos.append(productoObj)
 
 		
 
@@ -40,17 +47,24 @@ class Inventario:
 		with open(nombreArchivoCSV, newline='') as f:
 			reader = csv.reader(f)
 			data = list(reader)
+		contadorDeElementosErroneos = 0
 		for i in range(1, len(data)):
-			productoObj = producto.Producto(
-				data[i][0],
-				float(data[i][1]),
-				int(data[i][2]),
-				data[i][3].lower() in ['True','true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh'],
-				data[i][4],
-				int(data[i][5]),
-			)
-			if not self.checkDuplicate(productoObj):
-				self._listaProductos.append(productoObj)
+			try:
+				productoObj = producto.Producto(
+					data[i][0],
+					float(data[i][1]),
+					int(data[i][2]),
+					data[i][3].lower() in ['True','true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh'],
+					data[i][4],
+					int(data[i][5]),
+				)
+				if not self.checkDuplicate(productoObj):
+					self._listaProductos.append(productoObj)
+			except ValueError:
+				contadorDeElementosErroneos = contadorDeElementosErroneos + 1
+		if contadorDeElementosErroneos:
+			print("Hay "+ str(contadorDeElementosErroneos) +" Elementos con campos errones.\n")
+		
 
 	def __del__(self):
 		data = {}

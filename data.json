@@ -15,22 +15,6 @@
             "EsLiquido": false,
             "Marca": "Zucaritas",
             "Calificacion": 5
-        },
-        {
-            "Nombre": "Cereal",
-            "Precio": 45.0,
-            "Cantidad": 1000,
-            "EsLiquido": false,
-            "Marca": "Nesquik",
-            "Calificacion": 0
-        },
-        {
-            "Nombre": "Leche",
-            "Precio": 25.0,
-            "Cantidad": 1000,
-            "EsLiquido": true,
-            "Marca": "Lala",
-            "Calificacion": 3
         }
     ]
 }
