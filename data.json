@@ -1,20 +1,212 @@
 {
     "productos": [
         {
-            "Nombre": "Salchicha",
-            "Precio": 40.0,
+            "Nombre": "Pan Blanco",
+            "Precio": 30.0,
             "Cantidad": 1000,
             "EsLiquido": false,
-            "Marca": "Corona",
-            "Calificacion": 1
+            "Marca": "Bimbo",
+            "Calificacion": 2
+        },
+        {
+            "Nombre": "Leche Entera",
+            "Precio": 25.0,
+            "Cantidad": 1000,
+            "EsLiquido": true,
+            "Marca": "Lala",
+            "Calificacion": 3
+        },
+        {
+            "Nombre": "Salchicha de Pavo",
+            "Precio": 42.5,
+            "Cantidad": 500,
+            "EsLiquido": false,
+            "Marca": "San Rafael",
+            "Calificacion": 3
+        },
+        {
+            "Nombre": "Salchicha de Pavo",
+            "Precio": 46.5,
+            "Cantidad": 500,
+            "EsLiquido": false,
+            "Marca": "Zwan",
+            "Calificacion": 5
+        },
+        {
+            "Nombre": "Salchicha de Pavo",
+            "Precio": 98.0,
+            "Cantidad": 1000,
+            "EsLiquido": false,
+            "Marca": "Fud",
+            "Calificacion": 4
+        },
+        {
+            "Nombre": "Salchicha de Pavo",
+            "Precio": 92.0,
+            "Cantidad": 750,
+            "EsLiquido": false,
+            "Marca": "San Rafael",
+            "Calificacion": 3
         },
         {
             "Nombre": "Cereal",
-            "Precio": 60.0,
-            "Cantidad": 1040,
+            "Precio": 67.0,
+            "Cantidad": 920,
             "EsLiquido": false,
             "Marca": "Zucaritas",
             "Calificacion": 5
+        },
+        {
+            "Nombre": "Cereal",
+            "Precio": 46.9,
+            "Cantidad": 650,
+            "EsLiquido": false,
+            "Marca": "Nesquik",
+            "Calificacion": 4
+        },
+        {
+            "Nombre": "Cereal",
+            "Precio": 76.5,
+            "Cantidad": 410,
+            "EsLiquido": false,
+            "Marca": "Froot Loops",
+            "Calificacion": 2
+        },
+        {
+            "Nombre": "Leche Deslactosada",
+            "Precio": 135.0,
+            "Cantidad": 6000,
+            "EsLiquido": true,
+            "Marca": "Santa Clara",
+            "Calificacion": 5
+        },
+        {
+            "Nombre": "Leche Deslactosada",
+            "Precio": 140.0,
+            "Cantidad": 6000,
+            "EsLiquido": true,
+            "Marca": "Lala",
+            "Calificacion": 4
+        },
+        {
+            "Nombre": "Leche Deslactosada",
+            "Precio": 35.7,
+            "Cantidad": 1500,
+            "EsLiquido": true,
+            "Marca": "Alpura",
+            "Calificacion": 2
+        },
+        {
+            "Nombre": "Leche Light",
+            "Precio": 131.0,
+            "Cantidad": 6000,
+            "EsLiquido": true,
+            "Marca": "Lala",
+            "Calificacion": 4
+        },
+        {
+            "Nombre": "Queso Oaxaca",
+            "Precio": 56.0,
+            "Cantidad": 400,
+            "EsLiquido": false,
+            "Marca": "Lala",
+            "Calificacion": 4
+        },
+        {
+            "Nombre": "Queso Oaxaca",
+            "Precio": 70.5,
+            "Cantidad": 400,
+            "EsLiquido": false,
+            "Marca": "Esmeralda",
+            "Calificacion": 4
+        },
+        {
+            "Nombre": "Queso Oaxaca",
+            "Precio": 69.0,
+            "Cantidad": 400,
+            "EsLiquido": false,
+            "Marca": "Zwan",
+            "Calificacion": 2
+        },
+        {
+            "Nombre": "Queso Oaxaca",
+            "Precio": 125.0,
+            "Cantidad": 700,
+            "EsLiquido": false,
+            "Marca": "Lala",
+            "Calificacion": 4
+        },
+        {
+            "Nombre": "Queso Panela",
+            "Precio": 49.0,
+            "Cantidad": 300,
+            "EsLiquido": false,
+            "Marca": "FUD",
+            "Calificacion": 2
+        },
+        {
+            "Nombre": "Queso Panela",
+            "Precio": 39.0,
+            "Cantidad": 400,
+            "EsLiquido": false,
+            "Marca": "Lala",
+            "Calificacion": 4
+        },
+        {
+            "Nombre": "Pan de Caja",
+            "Precio": 46.0,
+            "Cantidad": 567,
+            "EsLiquido": false,
+            "Marca": "Wonder",
+            "Calificacion": 3
+        },
+        {
+            "Nombre": "Pan de Caja",
+            "Precio": 40.0,
+            "Cantidad": 680,
+            "EsLiquido": false,
+            "Marca": "Bimbo",
+            "Calificacion": 3
+        },
+        {
+            "Nombre": "Pan de Caja",
+            "Precio": 58.0,
+            "Cantidad": 680,
+            "EsLiquido": false,
+            "Marca": "Oroweat",
+            "Calificacion": 5
+        },
+        {
+            "Nombre": "Huevo Blanco",
+            "Precio": 67.5,
+            "Cantidad": 30,
+            "EsLiquido": false,
+            "Marca": "San Juan",
+            "Calificacion": 5
+        },
+        {
+            "Nombre": "Huevo Rojo",
+            "Precio": 45.5,
+            "Cantidad": 18,
+            "EsLiquido": false,
+            "Marca": "Bachoco",
+            "Calificacion": 4
+        },
+        {
+            "Nombre": "Huevo Blanco",
+            "Precio": 67.0,
+            "Cantidad": 30,
+            "EsLiquido": false,
+            "Marca": "El Calvario",
+            "Calificacion": 2
+        },
+        {
+            "Nombre": "Huevo Rojo",
+            "Precio": 70.0,
+            "Cantidad": 30,
+            "EsLiquido": false,
+            "Marca": "SanJuan",
+            "Calificacion": 4
         }
     ]
 }

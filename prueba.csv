@@ -1,5 +1,27 @@
 Nombre,Precio,Cantidad,EsLiquido,Marca,Calificacion
-Salchicha,40,1000,False,Corona,1
-Cereal,60,1040,False,Zucaritas,5
-Cereal,45,1000,False,Nesquik,4
-Leche,25,1000,True,Lala,3
+Salchicha de Pavo,42.50,500,False,San Rafael,3
+Salchicha de Pavo,46.50,500,False,Zwan,5
+Salchicha de Pavo,98,1000,False,Fud,4
+Salchicha de Pavo,92,750,False,San Rafael,3
+Cereal,67,920,False,Zucaritas,5
+Cereal,46.90,650,False,Nesquik,4
+Cereal,76.50,410,False,Froot Loops,2
+Leche Entera,25,1000,True,Lala,3
+Leche Deslactosada,135,6000,True,Santa Clara,5
+Leche Deslactosada,140,6000,True,Lala,4
+Leche Deslactosada,35.7,1500,True,Alpura,2
+Leche Light,131,6000,True,Lala,4
+Queso Oaxaca,56,400,False,Lala,4
+Queso Oaxaca,70.50,400,False,Esmeralda,4
+Queso Oaxaca,69,400,False,Zwan,2
+Queso Oaxaca,125,700,False,Lala,4
+Queso Oaxaca,125,700,False,Lala,4
+Queso Panela,49,300,False,FUD,2
+Queso Panela,39,400,False,Lala,4
+Pan de Caja,46,567,False,Wonder,3
+Pan de Caja,40,680,False,Bimbo,3
+Pan de Caja,58,680,False,Oroweat,5
+Huevo Blanco,67.5,30,False,San Juan,5
+Huevo Rojo,45.50,18,False,Bachoco,4
+Huevo Blanco,67,30,False,El Calvario,2
+Huevo Rojo,70,30,False,SanJuan,4

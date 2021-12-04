@@ -1,3 +1,11 @@
-1 - Salchicha Corona 1.0 Kg $40.0
-2 - Cereal Nesquik 1.0 Kg $45.0
-3 - Leche Lala 1.0 L $25.0
+1 - Pan Blanco Bimbo 1.0 Kg $30.0
+2 - Leche Entera Lala 1.0 L $25.0
+3 - Salchicha de Pavo Zwan 500 gr $46.5
+4 - Cereal Zucaritas 920 gr $67.0
+5 - Leche Deslactosada Santa Clara 6.0 L $135.0
+6 - Leche Light Lala 6.0 L $131.0
+7 - Queso Oaxaca Lala 400 gr $56.0
+8 - Queso Panela Lala 400 gr $39.0
+9 - Pan de Caja Oroweat 680 gr $58.0
+10 - Huevo Blanco San Juan 30 gr $67.5
+11 - Huevo Rojo Bachoco 18 gr $45.5

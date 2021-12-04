@@ -1,6 +1,8 @@
 import json
 import producto
 import csv
+import copy
+import sys
 
 class Inventario:
 	def __init__(self, nombreArchivo):
@@ -28,12 +30,42 @@ class Inventario:
 			jsonFile.write(jsonString)
 			jsonFile.close()
 
+	def getInventarioRecortado(self, listaSeleccion):
+		lista = copy.deepcopy(self._listaProductos)
+		indicesARemover=[]
 
-		
+		for i in range(len(lista)):
+			siEsta = False
+			for pNombre in listaSeleccion:
+				if pNombre == lista[i]._nombre:
+					siEsta = True
+			if not siEsta:
+				indicesARemover.append(i)
+		k=0
+		for i in indicesARemover:
+			del lista[i-k]
+			k = k+1
+		return lista
+
+
+	def appendProducto(self, nombre, precio, cantidad, esLiquido, marca, calificacion):
+		productoObj = producto.Producto(nombre, precio, cantidad, esLiquido, marca, calificacion)
+		if not self.checkDuplicate(productoObj):
+			self._listaProductos.append(productoObj)
+			return True
+		return False
+
+	def getPrecioMinimoDeUnaSeleccion(self, listaSeleccion):
+		minimo = sys.float_info.max
+		for p in self._listaProductos:
+			for nombreProductoListaSeleccion in listaSeleccion:
+				if p._nombre == nombreProductoListaSeleccion and p._precio < minimo:
+					minimo = p._precio
+		return minimo
 
 	def checkDuplicate(self, productoAChecar):
 		for i in range(len(self._listaProductos)):
-			if self._listaProductos[i]._nombre == productoAChecar._nombre and self._listaProductos[i]._marca == productoAChecar._marca and self._listaProductos[i]._cantidad == productoAChecar._cantidad:
+			if self._listaProductos[i]._nombre.lower() == productoAChecar._nombre.lower() and self._listaProductos[i]._marca.lower() == productoAChecar._marca.lower() and self._listaProductos[i]._cantidad == productoAChecar._cantidad:
 				return True
 		return False
 				

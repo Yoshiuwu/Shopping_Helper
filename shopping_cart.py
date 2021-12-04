@@ -16,12 +16,12 @@ class Shopping_Cart:
                 return False
         return True
 
-    def formulaSatisfaccion(self, totalPrecio, totalCalificaciones, cantidadDeGramosPorCadaPeso, cantidadDeProductosTomados, banderaProductoNoDeseado, banderaProductoYaTomado):
-        satisfaccion = (100000 * cantidadDeProductosTomados) / (len(self._listaSeleccion))#Si tomo todos los items te da 1000 puntos
+    def formulaSatisfaccion(self, totalPrecio, totalCalificaciones, cantidadDeGramosPorCadaPeso, cantidadDeProductosTomados, banderaProductoNoDeseado, productosYaTomados):
+        satisfaccion = (10000 * cantidadDeProductosTomados) / (len(self._listaSeleccion))#Si tomo todos los items te da 10000 puntos
         if (cantidadDeProductosTomados > 0):
-            satisfaccion = satisfaccion + (((self._dinero - totalPrecio) * cantidadDeGramosPorCadaPeso) * (totalCalificaciones / cantidadDeProductosTomados)) #Entre mayor sea la diferencia entre el dinero max y el propuesto por la solucion, es mejor
-        if banderaProductoYaTomado: 
-            satisfaccion = satisfaccion / 2
+            satisfaccion = satisfaccion + (((self._dinero - totalPrecio) * cantidadDeGramosPorCadaPeso) * (totalCalificaciones / cantidadDeProductosTomados))*.01 #Entre mayor sea la diferencia entre el dinero max y el propuesto por la solucion, es mejor
+        if productosYaTomados: 
+            satisfaccion = satisfaccion / (5*(productosYaTomados))
         if totalPrecio <= 0 or banderaProductoNoDeseado:
             satisfaccion = 0
         return satisfaccion
@@ -31,21 +31,21 @@ class Shopping_Cart:
         totalCalificaciones = 0
         cantidadDeGramosPorCadaPeso = 0
         productoNoDeseado = False
-        productoYaTomado = False
+        productosYaTomados = 0
         listaSeleccionados = []
         for i in range(len(cromosoma)):
             if cromosoma[i]:
-                total = total + self._inventario._listaProductos[i]._precio
-                totalCalificaciones = totalCalificaciones + self._inventario._listaProductos[i]._calificacion
-                cantidadDeGramosPorCadaPeso = cantidadDeGramosPorCadaPeso + ( self._inventario._listaProductos[i]._cantidad / self._inventario._listaProductos[i]._precio )
+                total = total + self._inventario[i]._precio
+                totalCalificaciones = totalCalificaciones + self._inventario[i]._calificacion
+                cantidadDeGramosPorCadaPeso = cantidadDeGramosPorCadaPeso + ( self._inventario[i]._cantidad / self._inventario[i]._precio )
                 if  total  > self._dinero:
                     break
-                if self.estaEnLaLista(self._inventario._listaProductos[i]) and self.noASidoTomado(self._inventario._listaProductos[i],listaSeleccionados):
-                    listaSeleccionados.append(self._inventario._listaProductos[i]._nombre)
-                elif self.estaEnLaLista(self._inventario._listaProductos[i]) and not self.noASidoTomado(self._inventario._listaProductos[i],listaSeleccionados):
-                    productoYaTomado = True
+                if self.estaEnLaLista(self._inventario[i]) and self.noASidoTomado(self._inventario[i],listaSeleccionados):
+                    listaSeleccionados.append(self._inventario[i]._nombre)
+                elif self.estaEnLaLista(self._inventario[i]) and not self.noASidoTomado(self._inventario[i],listaSeleccionados):
+                    productosYaTomados = productosYaTomados + 1
                 else:
                     productoNoDeseado = True
 
-        return self.formulaSatisfaccion(total, totalCalificaciones, cantidadDeGramosPorCadaPeso,len(listaSeleccionados), productoNoDeseado, productoYaTomado)
+        return self.formulaSatisfaccion(total, totalCalificaciones, cantidadDeGramosPorCadaPeso,len(listaSeleccionados), productoNoDeseado, productosYaTomados)
 
